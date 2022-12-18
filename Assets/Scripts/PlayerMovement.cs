@@ -15,9 +15,8 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate() {
         var horizontalPress = Input.GetAxis("Horizontal");
         var verticalPress = Input.GetAxis("Vertical");
-        //transform.position += 
-        //    new Vector3(horizontalPress, verticalPress, transform.position.z).normalized * (movementSpeed * Time.deltaTime);
-        var newPosition = new Vector3(horizontalPress, transform.position.y, verticalPress).normalized * (movementSpeed * Time.fixedDeltaTime);
-        rb.MovePosition(transform.position + newPosition);
+
+        var newPosition = new Vector3(horizontalPress, 0, verticalPress).normalized * (movementSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(new Vector3(transform.position.x + newPosition.x, transform.position.y, transform.position.z + newPosition.z));
     }
 }
