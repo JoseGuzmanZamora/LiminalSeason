@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float movementSpeed = 1f;
+    public CameraMovement cameraMovement;
     private Rigidbody rb;
 
     void Start()
@@ -16,7 +17,25 @@ public class PlayerMovement : MonoBehaviour
         var horizontalPress = Input.GetAxis("Horizontal");
         var verticalPress = Input.GetAxis("Vertical");
 
-        var newPosition = new Vector3(horizontalPress, 0, verticalPress).normalized * (movementSpeed * Time.fixedDeltaTime);
-        rb.MovePosition(new Vector3(transform.position.x + newPosition.x, transform.position.y, transform.position.z + newPosition.z));
+        // Get direction
+        var cameraDirection = cameraMovement.transform.forward;
+        var cameraDirectionCross = Vector2.Perpendicular(new Vector2(cameraDirection.x, cameraDirection.z));
+        var directionPerpendicular = new Vector3(-cameraDirectionCross.x, 0, -cameraDirectionCross.y);
+        var newPositionForward = new Vector3(verticalPress, 0, verticalPress).normalized * (movementSpeed * Time.fixedDeltaTime);
+        var newPositionSide = new Vector3(horizontalPress, 0, horizontalPress).normalized * (movementSpeed * Time.fixedDeltaTime);
+
+        var finalPosition = new Vector3(
+            (newPositionForward.x * cameraDirection.x) + (newPositionSide.x * directionPerpendicular.x),
+            0,
+            (newPositionForward.z * cameraDirection.z) + (newPositionSide.z * directionPerpendicular.z)
+        ).normalized;
+        
+
+        rb.MovePosition(
+            new Vector3(
+                transform.position.x + finalPosition.x, 
+                transform.position.y, 
+                transform.position.z + finalPosition.z)
+        );
     }
 }
