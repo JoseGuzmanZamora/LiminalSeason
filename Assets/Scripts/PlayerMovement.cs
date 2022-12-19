@@ -21,14 +21,14 @@ public class PlayerMovement : MonoBehaviour
         var cameraDirection = cameraMovement.transform.forward;
         var cameraDirectionCross = Vector2.Perpendicular(new Vector2(cameraDirection.x, cameraDirection.z));
         var directionPerpendicular = new Vector3(-cameraDirectionCross.x, 0, -cameraDirectionCross.y);
-        var newPositionForward = new Vector3(verticalPress, 0, verticalPress).normalized * (movementSpeed * Time.fixedDeltaTime);
-        var newPositionSide = new Vector3(horizontalPress, 0, horizontalPress).normalized * (movementSpeed * Time.fixedDeltaTime);
+        var newPositionForward = new Vector3(verticalPress, 0, verticalPress);
+        var newPositionSide = new Vector3(horizontalPress, 0, horizontalPress);
 
         var finalPosition = new Vector3(
             (newPositionForward.x * cameraDirection.x) + (newPositionSide.x * directionPerpendicular.x),
             0,
             (newPositionForward.z * cameraDirection.z) + (newPositionSide.z * directionPerpendicular.z)
-        ).normalized;
+        ).normalized * (movementSpeed * Time.fixedDeltaTime);
         
 
         rb.MovePosition(
