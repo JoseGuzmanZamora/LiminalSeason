@@ -14,6 +14,7 @@ public class SoundtrackManager : MonoBehaviour
 
     void Update()
     {
+        //Debug.Log(audioS.clip.name);
         if (audioS.isPlaying is false)
         {
             audioS.clip = clips[currentClip];

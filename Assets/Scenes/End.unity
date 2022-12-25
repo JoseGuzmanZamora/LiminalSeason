@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 364643975}
   - component: {fileID: 364643974}
   m_Layer: 5
-  m_Name: StockingsCount (1)
+  m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -183,8 +183,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Indie Minimalist
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 08c85f0616bc64ff58b3aa310a7defb4, type: 2}
-  m_sharedMaterial: {fileID: -1074626704274132983, guid: 08c85f0616bc64ff58b3aa310a7defb4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8491ae6f8dff54efcb2d8e7cc9da5e5b, type: 2}
+  m_sharedMaterial: {fileID: 7854590404817321520, guid: 8491ae6f8dff54efcb2d8e7cc9da5e5b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 1045363906}
   - component: {fileID: 1045363905}
   m_Layer: 5
-  m_Name: StockingsCount
+  m_Name: MainMessage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -422,8 +422,8 @@ MonoBehaviour:
 
     Merry Christmas!'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 08c85f0616bc64ff58b3aa310a7defb4, type: 2}
-  m_sharedMaterial: {fileID: -1074626704274132983, guid: 08c85f0616bc64ff58b3aa310a7defb4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8491ae6f8dff54efcb2d8e7cc9da5e5b, type: 2}
+  m_sharedMaterial: {fileID: 7854590404817321520, guid: 8491ae6f8dff54efcb2d8e7cc9da5e5b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 290055610}
   - component: {fileID: 290055609}
   m_Layer: 5
-  m_Name: StockingsCount
+  m_Name: MainMessage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -285,8 +285,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Way to ruin Christmas Santa...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 08c85f0616bc64ff58b3aa310a7defb4, type: 2}
-  m_sharedMaterial: {fileID: -1074626704274132983, guid: 08c85f0616bc64ff58b3aa310a7defb4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8491ae6f8dff54efcb2d8e7cc9da5e5b, type: 2}
+  m_sharedMaterial: {fileID: 7854590404817321520, guid: 8491ae6f8dff54efcb2d8e7cc9da5e5b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -813,8 +813,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Retry
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 08c85f0616bc64ff58b3aa310a7defb4, type: 2}
-  m_sharedMaterial: {fileID: -1074626704274132983, guid: 08c85f0616bc64ff58b3aa310a7defb4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8491ae6f8dff54efcb2d8e7cc9da5e5b, type: 2}
+  m_sharedMaterial: {fileID: 7854590404817321520, guid: 8491ae6f8dff54efcb2d8e7cc9da5e5b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

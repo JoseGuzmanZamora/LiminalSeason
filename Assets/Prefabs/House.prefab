@@ -10000,6 +10000,8 @@ MonoBehaviour:
   decorations: {fileID: 7153325151906474517}
   isDecorated: 0
   isSpecial: 0
+  isReady: 0
+  isOffBounds: 0
 --- !u!1 &5637001424223175682
 GameObject:
   m_ObjectHideFlags: 0
